@@ -268,7 +268,7 @@ function validateForm() {
     });
 
     const { min: minAllowed, max: maxAllowed } = allowedMonthWindow();
-    ["license_issuance_date", "license_start_date"].forEach(key => {
+    ["license_issuance_date"].forEach(key => {
         const f = fieldByKey(key);
         const val = getValue(f);
         if (val && (val < minAllowed || val > maxAllowed)) {
